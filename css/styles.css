@@ -1,0 +1,307 @@
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body{
+   background: linear-gradient(45deg,red,pink,blue); 
+   background-size: 400% 400%;
+   position: relative;
+   animation: cambiar 10s ease infinite;
+   font-family: 'Tilt Prism', cursive;
+   font-size: 18px;
+   line-height: 1.2;
+   transition: .3s ease all;
+   
+}
+   
+body.dark{
+    background: #000;
+}
+
+
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    align-items: center;
+    padding: 10px;
+    background-color: #fbfbfb;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 3px 10px -5px #af599e
+    
+}
+
+
+
+
+.Logo-mvd{
+    
+    height: 90px;
+    
+    
+}
+
+nav ul{
+ display: flex;
+ margin: 0;
+ padding: 0;
+
+
+}
+
+nav ul li{
+    margin-left: 30px;
+    margin-right: 35px;
+
+    
+}
+
+nav ul li a:hover{
+ color: #0f0f0f;
+ background-color: #af599e;
+ border-radius: 5px;
+
+}
+
+
+
+body.dark nav a{
+    color: #72486f;
+}
+
+body.dark nav a:hover{
+    color: #FEFEFE;
+}
+
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+
+ .switch{
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+ &::after{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba ( 0,0,0 .2);
+    }
+
+ }
+ 
+ .switch.active{
+    background: orange;
+    color: #000;
+    &::after{
+        right: 0;
+        left: unset;
+    }
+}
+
+
+
+
+
+ span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+ }
+
+
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.img-principal{
+    
+    border-radius: 100%;
+    width: 300px;
+    
+    
+
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    padding-top: 10px;
+    min-height: 100vh;
+    
+
+}
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark section{
+    
+    color: #fff;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align:center;
+    
+    
+}
+
+body.dark article{
+    color: #fff;
+}
+h1{
+    font-size: 48px;
+    text-align: center;
+}
+h2{
+    font-size: 32px;
+}
+
+p{
+    margin: 15px;
+    
+    
+}
+
+.boton{
+ 
+    display: block;
+    width: 200px;
+    border: 1px solid #AAA;
+    color: #681b5d;
+    padding: 6px 5px;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    margin-top: 60px;
+    margin-left: 200px;
+
+}
+
+.boton::before{
+
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    background-color: #af599e;
+    z-index: -1;
+    left: 100%;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.boton:hover{
+    color:#0f0f0f;
+}
+
+.boton:hover::before{
+    left: 0%;
+    width: 100%;
+    transition: width 0.3s;
+}
+
+
+
+.contacto-1 img {
+    display: flex;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 5px 12px 8px black;}
+
+
+.contacto-1{
+    
+    color: #0f0f0f;
+     
+}
+
+
+
+ul#contacto-links{
+    display: flex;
+    margin-top: 100%;}
+
+ul#contacto-links li{
+    margin: 30px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+body.dark #contacto-links{
+    background:rgba(175, 89, 158, 0.3);
+}
+
+    
+@keyframes cambiar {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+    
+footer{
+    background-color:#681b5d;
+    color:#fbfbfb ;
+    height: 90px;
+    justify-content: center;
+    text-align: center;
+}
+
